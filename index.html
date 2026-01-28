@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGAL Academy: Fetal Circulation & Assessment (Complete)</title>
+    <!-- Importing Merriweather Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & BASIC SETUP --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212; /* Deep Charcoal */
+            background-image: radial-gradient(circle at 50% 0%, #1e1e24 0%, #0d0d0d 100%);
+            color: #e0e0e0; /* High contrast off-white */
+            font-family: 'Merriweather', serif;
+            font-size: 26px; /* Requested size */
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- SCROLL PROGRESS BAR --- */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            width: 0%;
+            transition: width 0.1s ease-out;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.7);
+        }
+
+        /* --- MAIN CONTAINER --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 100px 20px;
+        }
+
+        /* --- LOGO STYLING --- */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .logo {
+            width: 100%; 
+            max-width: 350px; 
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));
+        }
+
+        /* --- TEXT BLOCK STYLING & ANIMATION --- */
+        .message-block {
+            margin-bottom: 35px; /* Generous spacing */
+            opacity: 0; /* Hidden initially */
+            transform: translateY(30px); /* Pushed down */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .message-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typography Accents */
+        strong {
+            color: #81d4fa; /* Soft Blue for emphasis */
+            font-weight: 900;
+        }
+
+        .highlight {
+            color: #ffd54f; /* Soft Gold for warnings/key terms */
+            font-weight: 700;
+        }
+
+        /* --- VIP SECTION & BUTTON --- */
+        .vip-container {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .vip-text {
+            color: #ff8a80;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .vip-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff512f, #dd2476);
+            color: white;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-family: 'Merriweather', sans-serif;
+            font-weight: bold;
+            font-size: 22px;
+            box-shadow: 0 10px 20px rgba(221, 36, 118, 0.4);
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+            border: none;
+            cursor: pointer;
+        }
+
+        .vip-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- KEYFRAMES --- */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 81, 47, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 81, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 81, 47, 0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            body { font-size: 20px; }
+            .container { padding: 20px 15px 80px 15px; }
+            .logo { max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div class="container">
+        <!-- Logo Header -->
+        <div class="logo-container">
+            <img src="https://i.imgur.com/eP0BFrd.png" alt="HGAL Academy Logo" class="logo">
+        </div>
+
+        <!-- LECTURE CONTENT START -->
+
+        <div class="message-block">
+            👋 Hello, students! Welcome to class. Today, we are going to explore something truly magical: <strong>Fetal Circulation</strong> and how we check if a baby is growing happily inside the womb.
+        </div>
+
+        <div class="message-block">
+            Imagine you are a deep-sea diver. You have a tank on your back for air, right? 🤿 Well, a baby inside the womb (in utero) is a lot like that diver.
+        </div>
+
+        <div class="message-block">
+            As early as the <strong>3rd week</strong> of life inside the womb, the baby’s blood starts exchanging nutrients with the mom. But here is the big difference:
+        </div>
+
+        <div class="message-block">
+            The baby does <strong>NOT</strong> use their lungs to breathe oxygen like we do! 🙅‍♂️🌬️
+        </div>
+
+        <div class="message-block">
+            Instead, the baby gets all their oxygen and gets rid of carbon dioxide through the <strong>Placenta</strong>.
+        </div>
+
+        <div class="message-block">
+            Does blood go to the baby's lungs? Yes, but only a tiny bit just to keep the lung cells alive. The lungs aren't doing the "breathing" job yet.
+        </div>
+
+        <div class="message-block">
+            Because of this, the baby has special structures—think of them as <strong>"traffic shortcuts"</strong>—that send blood to the most important organs: the Brain 🧠, Liver, Heart ❤️, and Kidneys.
+        </div>
+
+        <div class="message-block">
+            Let's follow the blood flow! 🩸
+        </div>
+
+        <div class="message-block">
+            Blood comes from the placenta, super rich in oxygen. It travels to the baby through the <strong>Umbilical Vein</strong>.
+        </div>
+
+        <div class="message-block">
+            <span class="highlight">Wait, a vein carrying oxygen?</span> Yes! Usually, veins carry dirty blood, but in the fetus, the Umbilical Vein carries the good stuff <em>towards</em> the heart.
+        </div>
+
+        <div class="message-block">
+            This blood hits the first shortcut called the <strong>Ductus Venosus</strong>.
+        </div>
+
+        <div class="message-block">
+            The Ductus Venosus takes most of that rich blood, bypasses the liver (it gives the liver just a little), and dumps it straight into the <strong>Inferior Vena Cava</strong>.
+        </div>
+
+        <div class="message-block">
+            From there, it goes into the Right side of the heart (Right Atrium). 🫀
+        </div>
+
+        <div class="message-block">
+            Now, normally blood would go to the lungs next. But remember, the lungs are closed for business! So, the blood takes the second shortcut: the <strong>Foramen Ovale</strong>.
+        </div>
+
+        <div class="message-block">
+            This is a little door between the Right Atrium and the Left Atrium. The blood slips through there, goes to the Left Ventricle, and is pumped out to the body via the Aorta! 🚀
+        </div>
+
+        <div class="message-block">
+            But what about the blood coming back from the baby’s head and arms? That enters the heart and tries to go to the lungs.
+        </div>
+
+        <div class="message-block">
+            It needs to be redirected away from the lungs too! So, it uses the third shortcut: the <strong>Ductus Arteriosus</strong>.
+        </div>
+
+        <div class="message-block">
+            This connects the Pulmonary Artery directly to the Aorta. So the blood skips the lungs and goes down to the lower body.
+        </div>
+
+        <div class="message-block">
+            Finally, the blood—now low on oxygen—needs to go back to mom to get recharged. It travels through the <strong>Umbilical Arteries</strong> back to the placenta. 🔄
+        </div>
+
+        <div class="message-block">
+            Fun fact: The baby’s oxygen level is only about <strong>80%</strong> of what ours is! To make up for this, the baby’s heart beats super fast—<strong>120 to 160 beats per minute</strong>! 💓
+        </div>
+
+        <div class="message-block">
+            Okay, let’s now move on to… <strong>How we measure Growth and Development!</strong> 📏
+        </div>
+
+        <div class="message-block">
+            Nurses have a huge responsibility here. We must get signed consent, explain everything to the mom (and her support person), and make sure she is comfortable physically and mentally.
+        </div>
+
+        <div class="message-block">
+            If a procedure has <em>any</em> risk, we need "Additional Consent" so the mom knows exactly what might happen. Safety first! 🛡️
+        </div>
+
+        <div class="message-block">
+            Let’s talk about estimating growth. One famous method is <strong>McDonald’s Rule</strong>. (No, not the burgers! 🍔❌)
+        </div>
+
+        <div class="message-block">
+            This uses a tape measure on the mom's tummy. Between <strong>20 and 31 weeks</strong>, the height of the uterus in centimeters usually equals the number of weeks she is pregnant!
+        </div>
+
+        <div class="message-block">
+            So, 24 weeks pregnant = 24 cm belly height. Easy, right?
+        </div>
+
+        <div class="message-block">
+            We measure from the pubic bone (symphysis pubis) up to the top of the uterus (fundus).
+        </div>
+
+        <div class="message-block">
+            ⚠️ <span class="highlight">Note:</span> This rule stops working well in the 3rd trimester because the baby starts gaining <em>weight</em> rather than just getting taller.
+        </div>
+
+        <div class="message-block">
+            If the measurement is too big? Could be twins! 👯‍♀️ Or too much fluid. <br>
+            If it's too small? The dates might be wrong, or the baby might not be developing correctly.
+        </div>
+
+        <div class="message-block">
+            We also look for milestones:
+            <br>• 12 weeks: Uterus is just peeking over the pubic bone.
+            <br>• 20 weeks: It’s at the belly button (umbilicus).
+            <br>• 36 weeks: It’s all the way up at the ribs (xiphoid process).
+        </div>
+
+        <div class="message-block">
+            Now that we understand growth, let’s talk about… <strong>Fetal Well-Being!</strong> Is the baby happy inside? 🤔
+        </div>
+
+        <div class="message-block">
+            First up: <strong>Movement!</strong> ⚽
+        </div>
+
+        <div class="message-block">
+            Mom usually feels the baby move (Quickening) around 18-20 weeks. A healthy baby moves a lot!
+        </div>
+
+        <div class="message-block">
+            If the placenta isn't working well, the baby moves less to save energy. A healthy baby should move at least <strong>10 times a day</strong>.
+        </div>
+
+        <div class="message-block">
+            We can use the <strong>Sandovsky Method</strong>: Mom lies on her left side after a meal and counts. Ideally, she feels movements 10 to 12 times in an hour.
+        </div>
+
+        <div class="message-block">
+            If she feels fewer than 5 movements in that hour? She should call her doctor immediately! ☎️
+        </div>
+
+        <div class="message-block">
+            Or the <strong>Cardiff Method</strong> (Count-to-Ten): She times how long it takes to feel 10 kicks. Usually, it happens within 60 minutes.
+        </div>
+
+        <div class="message-block">
+            Remember to tell mom: Babies sleep too! 😴 So sometimes they are just napping. Don't panic immediately, but stay observant.
+        </div>
+
+        <div class="message-block">
+            Let’s now dive into… <strong>The Heart Rate</strong> 💓
+        </div>
+
+        <div class="message-block">
+            Normal Fetal Heart Rate (FHR) is <strong>120 - 160 bpm</strong>. We can hear this with a Doppler tool as early as 10-11 weeks.
+        </div>
+
+        <div class="message-block">
+            We do something called <strong>Rhythm Strip Testing</strong>. We put a monitor on mom’s belly for 20 minutes.
+        </div>
+
+        <div class="message-block">
+            We look for two things:
+            <br>1. <strong>Short-term variability:</strong> Tiny second-to-second changes. This shows the baby's nerves are getting oxygen.
+            <br>2. <strong>Long-term variability:</strong> Bigger changes over 20 minutes.
+        </div>
+
+        <div class="message-block">
+            When the baby moves, the heart rate should go UP. Just like when you run, your heart beats faster! 🏃‍♂️
+        </div>
+
+        <div class="message-block">
+            Next, we’ll look at… <strong>The Non-Stress Test (NST)</strong>.
+        </div>
+
+        <div class="message-block">
+            This is safe and easy. Mom pushes a button every time the baby kicks.
+        </div>
+
+        <div class="message-block">
+            A <strong>Reactive Result</strong> (This is GOOD! ✅) means:
+            <br>Every time the baby moves, the heart rate goes up by 15 beats for 15 seconds. We want to see this happen 2 times in 20 minutes.
+        </div>
+
+        <div class="message-block">
+            A <strong>Non-Reactive Result</strong> (This needs checking ⚠️) means no heart rate increase when moving, or no movement at all.
+        </div>
+
+        <div class="message-block">
+            If the baby won't move, we might give mom some orange juice 🍊 (sugar wakes the baby up!) or use <strong>Vibroacoustic Stimulation</strong>.
+        </div>
+
+        <div class="message-block">
+            That’s a fancy way of saying we use a buzzer to make a sharp sound (ZZZTT! 🔊) on mom's belly to startle and wake the baby.
+        </div>
+
+        <div class="message-block">
+            At this point, it’s important to consider… <strong>Contraction Stress Testing (CST)</strong>.
+        </div>
+
+        <div class="message-block">
+            This is a tougher test. We want to see how the baby handles the stress of a contraction (like during labor).
+        </div>
+
+        <div class="message-block">
+            We used to use IV drugs to start contractions, but that was risky. Now, we use <strong>Nipple Stimulation</strong>.
+        </div>
+
+        <div class="message-block">
+            When mom rubs her nipple, her body releases Oxytocin (the labor hormone), causing gentle contractions.
+        </div>
+
+        <div class="message-block">
+            We need 3 contractions in 10 minutes to judge the test.
+        </div>
+
+        <div class="message-block">
+            <span class="highlight">Pay close attention here:</span>
+            <br><strong>Negative = Normal (GOOD)</strong> 😊: The heart rate stays steady during contractions.
+            <br><strong>Positive = Abnormal (BAD)</strong> 😟: The heart rate dips <em>late</em> after the contraction starts (Late Deceleration). This means the baby is struggling.
+        </div>
+
+        <div class="message-block">
+            After this test, mom has to stay for 30 minutes to make sure the contractions stop so she doesn't go into labor early!
+        </div>
+
+        <!-- NEWLY ADDED CONTENT BELOW -->
+
+        <div class="message-block">
+            Alright, class! Now that we've covered stress tests, let's talk about a very popular tool: <strong>Ultrasound</strong>! 🦇
+        </div>
+
+        <div class="message-block">
+            Think of how a bat flies in the dark or a submarine sees underwater using sonar. That’s exactly what ultrasound is! It bounces sound waves off the baby to create a picture.
+        </div>
+
+        <div class="message-block">
+            We can use this amazing tool to:
+            <br>• Diagnose pregnancy as early as <strong>6 weeks</strong>.
+            <br>• Check the placenta and fluid.
+            <br>• Check for defects (like heart or kidney issues).
+            <br>• See the baby’s position (and maybe tell if it’s a boy or girl! 👶).
+        </div>
+
+        <div class="message-block">
+            <span class="highlight">How does it work?</span>
+            <br>A device called a <strong>Transducer</strong> sends sound waves (too high for our ears to hear) into the uterus. The echoes bounce back and create an image on a screen.
+        </div>
+
+        <div class="message-block">
+            We have two main "modes":
+            <br>1. <strong>B-Mode (Gray-scale):</strong> This is like a black-and-white photo.
+            <br>2. <strong>Real-time Mode:</strong> This is like a movie! 🎥 You can see the heart beating or the baby sucking their thumb.
+        </div>
+
+        <div class="message-block">
+            <strong>Preparation is Key!</strong>
+            <br>If mom is getting an abdominal ultrasound, we need her to have a <strong>FULL bladder</strong>. Why? Because a full bladder pushes the uterus up and acts like a window for the sound waves.
+        </div>
+
+        <div class="message-block">
+            So, tell her to drink a full glass of water every 15 minutes starting 1.5 hours before the test, and <em>don't pee!</em> 🚽🚫
+        </div>
+
+        <div class="message-block">
+            During the test, we put a towel under her right hip to prevent <strong>Supine Hypotension</strong> (so the heavy uterus doesn't squash her blood vessels). We use warm gel to help the transducer slide.
+        </div>
+
+        <div class="message-block">
+            Now, let's look at... <strong>Biparietal Diameter (BPD)</strong>.
+        </div>
+
+        <div class="message-block">
+            This is just a fancy way of saying "measuring the baby's head from side to side." 📏 If the head is <strong>8.5 cm</strong> wide, the baby usually weighs over 2.5kg and is likely around 40 weeks (ready to be born!).
+        </div>
+
+        <div class="message-block">
+            We can also listen to the blood flow using <strong>Doppler Umbilical Velocimetry</strong>.
+        </div>
+
+        <div class="message-block">
+            Imagine checking the speed of cars on a highway. 🚗💨 This test checks the speed of red blood cells in the vessels. It helps us see if blood is flowing easily or if there is resistance (which can happen if mom has diabetes or hypertension).
+        </div>
+
+        <div class="message-block">
+            Another cool thing ultrasound does is <strong>Placental Grading</strong>.
+        </div>
+
+        <div class="message-block">
+            Just like we get gray hair as we age, the placenta gets calcium deposits. We grade it from 0 (young) to 3 (mature). A <strong>Grade 3</strong> placenta means the baby’s lungs are likely mature too!
+        </div>
+
+        <div class="message-block">
+            Next up: <strong>Amniotic Fluid Volume</strong>. 💧
+        </div>
+
+        <div class="message-block">
+            Think of the amniotic fluid as a swimming pool. If the baby is stressed, they pee less (yes, the fluid is partly baby pee!), so the pool level drops.
+        </div>
+
+        <div class="message-block">
+            We measure "pockets" of fluid.
+            <br>• <strong>Hydramnios:</strong> Too much fluid (Index > 20-24cm). Maybe the baby isn't swallowing?
+            <br>• <strong>Oligohydramnios:</strong> Too little fluid (Index < 5-6cm). This is dangerous because the cord can get squashed!
+        </div>
+
+        <div class="message-block">
+            Let's switch gears to blood tests: <strong>Maternal Serum Alpha-Fetoprotein (MSAFP)</strong>.
+        </div>
+
+        <div class="message-block">
+            Alpha-fetoprotein is made by the baby’s liver.
+            <br>• If levels are <strong>HIGH</strong> in mom's blood: The baby might have an open defect (like Spina Bifida).
+            <br>• If levels are <strong>LOW</strong>: It could suggest Down Syndrome.
+        </div>
+
+        <div class="message-block">
+            To be more accurate, we do a <strong>Triple Screen</strong> (checking 3 things: AFP, Estriol, and hCG). This catches about 60-70% of Down Syndrome cases.
+        </div>
+
+        <div class="message-block">
+            Now, let's talk about invasive tests (where we actually go inside). First is <strong>Chorionic Villi Sampling (CVS)</strong>.
+        </div>
+
+        <div class="message-block">
+            Done early (10-12 weeks), we take a tiny biopsy of the placenta "tree" (the villi) to check genetics.
+        </div>
+
+        <div class="message-block">
+            Then we have the big one: <strong>Amniocentesis</strong>. 💉
+        </div>
+
+        <div class="message-block">
+            This involves putting a needle through mom's belly into the uterus to take some fluid. We can do this as early as 12-13 weeks.
+        </div>
+
+        <div class="message-block">
+            ⚠️ <strong>Important Prep Difference:</strong> Unlike ultrasound, for Amniocentesis, we usually ask mom to <strong>EMPTY her bladder</strong> so we don't accidentally poke it!
+        </div>
+
+        <div class="message-block">
+            What do we look for in the fluid?
+            <br>1. <strong>Color:</strong> Should be like water. Yellow? Blood issue. Green? Meconium (baby pooped in distress).
+            <br>2. <strong>L/S Ratio:</strong> This checks lung maturity. We want a ratio of <strong>2:1</strong>. This means the lungs are strong enough to breathe air!
+        </div>
+
+        <div class="message-block">
+            There is also <strong>Percutaneous Umbilical Blood Sampling (PUBS)</strong>. This is where we take blood directly from the umbilical cord. It's great for checking anemia.
+        </div>
+
+        <div class="message-block">
+            Or we can use a tiny camera called a <strong>Fetoscope</strong> to actually LOOK at the baby and even do surgery inside the womb! 😲 (Though this is rare and risky).
+        </div>
+
+        <div class="message-block">
+            Finally, we put it all together in a <strong>Biophysical Profile (BPP)</strong>. 📋
+        </div>
+
+        <div class="message-block">
+            Think of this as the baby's "Report Card." We score the baby on 5 things (Movement, Tone, Breathing, Fluid, and Heart Rate).
+        </div>
+
+        <div class="message-block">
+            • Score <strong>8 to 10</strong>: Great job, baby is healthy! 🌟
+            <br>• Score <strong>4 to 6</strong>: Uh oh, baby might be in trouble.
+        </div>
+
+        <div class="message-block">
+            And that brings us to the end of our journey on Fetal Circulation and Assessment! You have learned so much today. I am proud of you! 🎓
+        </div>
+
+        <div class="vip-container message-block">
+            Join our VIP if you're yet to, for more study materials and other bonuses (worth #115,000). 
+            For more details click below
+            <br><br>
+            👇
+            <br><br>
+            <a href="https://tinyurl.com/2dbtvx2b" class="vip-btn" target="_blank">Click Here</a>
+        </div>
+
+        <!-- LECTURE CONTENT END -->
+
+    </div>
+
+    <script>
+        // --- SCROLL ANIMATION LOGIC ---
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the item is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const blocks = document.querySelectorAll('.message-block');
+            blocks.forEach(block => {
+                observer.observe(block);
+            });
+        });
+
+        // --- PROGRESS BAR LOGIC ---
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+          </html>
